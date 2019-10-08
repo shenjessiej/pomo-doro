@@ -1,0 +1,15 @@
+.Timer {
+    position: absolute;
+    font-size: 120px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    line-height: 120px;
+    top: 50%;
+    margin-top: 00px;
+    left: 50%;
+    color: #323232;
+    width: 300px;
+    text-align: center;
+    margin-left: -150px;
+
+}

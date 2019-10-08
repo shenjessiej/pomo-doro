@@ -1,14 +1,145 @@
 .App {
   text-align: center;
-  font-family: "Courier New", monospace;
+  font-family: 'Helvetica';
   width: 100%;
+  height: 100%;
+  color: #242424;
 }
+
+.focus {
+  --accent: #DD6565;
+  --second: #FFE0D9;
+}
+.shortbreak {
+  --accent: #6597DD;
+  --second: #D9E0FF;
+}
+
 
 h1 {
-  font-weight: normal;
-  font-size: 42px;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: 'Lato';
+  position: absolute;
+  letter-spacing: 2px;
+  color: var(--accent);
+  left: 5%;
+  top: 5%;
+  padding-bottom: 20px;
+  width: 140px;
+  border-bottom: 2px solid rgb(225, 225, 225);
 }
 
+.links {
+  font-family: 'Lato';
+  font-weight: normal;
+  left: 5%;
+  top: 5%;
+  margin-top: 170px;
+  text-align: left;
+  width: 200px;
+  color: rgb(118, 118, 118);
+  font-size: 16px;
+  position: absolute;
+  margin-left: 15px;
+
+}
+
+.links span {
+  background: linear-gradient( to right, var(--second) 0%, var(--second) 100% );
+  background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    text-decoration: none;
+    padding: 0px 2px 0px 2px;
+    transition: background-size .6s;
+    color: var(--accent);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.links span:hover {
+  background-size: 4px 50px;
+  text-decoration: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.helpertext {
+margin-left: 15px;
+font-size: 14px;
+overflow: hidden;
+}
+
+.helpertext a {
+  text-decoration: none;
+  color: var(--accent)
+}
+
+.visible {
+  height: 100%;
+
+}
+
+.invisible {
+  height: 0px;
+
+}
+
+.subtitle {
+  font-family: 'Lato';
+  font-weight: normal;
+  left: 5%;
+  top: 5%;
+  margin-top: 110px;
+  text-align: left;
+  width: 140px;
+  color: rgb(118, 118, 118);
+  font-size: 18px;
+  position: absolute;
+}
+
+.credit {
+  font-family: 'Lato';
+  font-weight: normal;
+  left: 5%;
+  bottom: 5%;
+  text-align: right;
+  color: rgb(118, 118, 118);
+  font-size: 12px;
+  position: absolute;
+}
+
+.credit a {
+  background: linear-gradient( to right, var(--second) 0%, var(--second) 100% );
+  background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    text-decoration: none;
+    padding: 0px 2px 0px 2px;
+    transition: background-size .6s;
+    color: var(--accent);
+}
+
+.credit a:hover {
+  background-size: 4px 50px;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.timersubtitle {
+  font-family: 'Helvetica';
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #BDBDBD;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-left: -150px;
+  margin-top: -20px;
+}
 .passwords {
   list-style: none;
   padding: 0;
@@ -16,16 +147,94 @@ h1 {
   margin-bottom: 2em;
 }
 
-.more {
-  font-size: 32px;
-  font-family: "Courier New", monospace;
-  border: 2px solid #000;
-  background-color: #fff;
-  padding: 10px 25px;
+.button-play {
+  font-size: 30px;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background-color: #242424;
+  color: #fff;
+  border: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 125px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  text-align: center;
+  margin-left: -150px;
+  transition: .5s;
+  cursor: pointer;
+
 }
-.more:hover {
-  background-color: #FDD836;
+
+.button-restart {
+  font-size: 30px;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background-color: #242424;
+  color: #fff;
+  border: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 125px;
+  left: 50%;
+  margin-left: -70px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  text-align: center;
+  transition: .5s;
+  cursor: pointer;
+
 }
-.more:active {
-  background-color: #FFEFA9;
+
+.button-play:hover {
+  transition: .5s;
+}
+
+.progressbar {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.sessionProgress {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+.sessionProgressCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 25px;
+
+}
+
+.incomplete {
+  background-color: rgb(237, 237, 237);
+  transition: 1s;
+
+}
+
+.active {
+  background: linear-gradient(45deg, var(--accent) 0%, var(--accent)48%, rgb(237, 237, 237) 50%);
+  transition: 1s;
+
+}
+ .complete {
+  background-color: var(--accent);
+  transition: 1s;
 }
