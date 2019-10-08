@@ -404,7 +404,7 @@ async playSound() {
           <div onClick={this.setSession1} className={this.state.session1 + " sessionProgressCircle"}></div>
         </div>
 
-        <div className="credit">created by <a href="http://jessieshen.me">jessie shen</a>. now on <a href="http://github.com/">github</a>.</div>
+        <div className="credit">created by <a href="http://jessieshen.me">jessie shen</a>. now on <a href="https://github.com/shenjessiej/pomo-doro">github</a>.</div>
 
         <svg className="progressbar" height="206" width="206">
           <circle cx="103" cy="103" r="100" stroke="#EFEFEF" stroke-width="3" fill="white" />
